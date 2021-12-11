@@ -12,7 +12,7 @@
 
     <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-parent</artifactId>
+        <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.6.RELEASE</version>
     </parent>
 
@@ -89,14 +89,14 @@
             <artifactId>core</artifactId>
             <version>3.3.1</version>
             <scope>system</scope>
-            <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/aliyun-java-sdk-core-3.3.1.jar</systemPath>
+            <systemPath>${basedir}/src/main/resources/lib/aliyun-java-sdk-core-3.3.1.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.aliyun.sdk</groupId>
             <artifactId>dysmsapi</artifactId>
             <version>1.0.0</version>
             <scope>system</scope>
-            <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/aliyun-java-sdk-dysmsapi-1.0.0.jar</systemPath>
+            <systemPath>${basedir}/src/main/resources/lib/aliyun-java-sdk-dysmsapi-1.0.0.jar</systemPath>
         </dependency>
         <!-- POI依赖 -->
         <dependency>
@@ -115,6 +115,105 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>1.8.10</version>
+        </dependency>
+
+        <!-- other -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.47</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alipay</groupId>
+            <artifactId>sdk</artifactId>
+            <version>1.5</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/alipay-sdk-java20170818173712.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.xxpay</groupId>
+            <artifactId>xxpay-core</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/xxpay-core-1.0.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-client</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jline</groupId>
+            <artifactId>jline</artifactId>
+            <version>0.9.94</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.netty</groupId>
+            <artifactId>netty</artifactId>
+            <version>3.2.5.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty</artifactId>
+            <version>3.7.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.dubbo.springboot</groupId>
+            <artifactId>spring-boot-starter-dubbo</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.6</version>
         </dependency>
 
 
@@ -225,6 +324,14 @@
                     <skipTests>true</skipTests>
                     <!--是否忽略单元测试错误-->
                     <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>
